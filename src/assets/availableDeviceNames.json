@@ -1,0 +1,21 @@
+[
+    {
+        "id": "ed57ecc3-6d88-4cfa-bd7f",
+        "deviceName": "smartBulb",
+        "deviceDescription":"Very smart Bulb"
+    },
+    {
+        "id": "6d88-4cfa-bd7f-1fd70e23944f",
+        "deviceName": "sensor",
+        "deviceDescription":"Cool Sensor"
+
+    },
+    {
+        "id": "4cfa-bd7f-1fd70e23944f",
+        "deviceName": "smartKettle",
+        "deviceDescription":"Very smart Kettle"
+
+    }
+]
+
+
