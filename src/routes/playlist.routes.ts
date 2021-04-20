@@ -22,7 +22,7 @@ playlistRouter.post('/insertVideo', function (req, res) {
         });
     }
     const videoId = req.body.videoId;
-    getYoutubeVideoInfo(req.body.videoId).then((response: { data: YoutubeApiResponse }) => {
+    getYoutubeVideoInfo(videoId).then((response: { data: YoutubeApiResponse }) => {
         response.data['items'].map((item) => {
             const duration = moment.duration(item.contentDetails.duration).format('HH:mm:ss', { trim: false });
             const videoItem: YoutubeVideoItem = {
@@ -34,7 +34,7 @@ playlistRouter.post('/insertVideo', function (req, res) {
             playlistController.saveNewVideoID(videoItem, res);
         });
     })
-    .catch((error: any) => console.log(error));
+        .catch((error: any) => console.log(error));
 });
 
 
