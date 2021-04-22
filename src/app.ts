@@ -11,7 +11,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(requestLog);
-app.use(expressWinston.logger(loggerOptions()));
 app.use(expressWinston.errorLogger(loggerOptions()));
 app.use(logErrors);
 app.use(errorHandler);
