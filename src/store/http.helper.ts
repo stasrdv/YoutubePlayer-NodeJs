@@ -1,6 +1,7 @@
 import moment from "moment";
 import { YoutubeVideoItem } from "./models/video-item.dto";
 import { YoutubeApiResponse } from "./models/youtube-api-response";
+import 'moment-duration-format';
 
 const axios = require('axios');
 
@@ -22,7 +23,7 @@ export const getYoutubeVideoItem = (videoId: string): Promise<YoutubeVideoItem> 
                 }
                 resolve(videoItem);
             })
-        }).catch((error: any) => reject(error));
+        }).catch((error: any) => reject(error))
     });
 }
 

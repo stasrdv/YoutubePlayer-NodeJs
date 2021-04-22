@@ -12,7 +12,7 @@ playlistRouter.get('/getVideos', (req, res) => {
     playlistController.getVideoItems(res);
 });
 
-playlistRouter.post('/insertVideo', (req, res, checkBody) => {
+playlistRouter.post('/insertVideo', (req, res) => {
     if (!req.body) {
         return res.status(400).json({
             status: 'Error',
@@ -24,7 +24,7 @@ playlistRouter.post('/insertVideo', (req, res, checkBody) => {
         .catch(err => {
             return res.status(400).json({
                 status: 'Error',
-                error: err,
+                error: err.toString(),
             });
         });
 });

@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 import { PlaylistSchema } from '../schemas/playlist.scehma';
-import {  Response } from 'express';
+import { Response } from 'express';
 import { EMIT_ITEM } from '../../constants/constants';
 import { emitSocketEvent } from '../../utils/socket.utils';
 import { YoutubeVideoItem } from '../models/video-item.dto';
